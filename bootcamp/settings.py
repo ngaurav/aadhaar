@@ -32,12 +32,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'bootcamp.activities',
-    'bootcamp.articles',
     'bootcamp.authentication',
     'bootcamp.core',
     'bootcamp.feeds',
     'bootcamp.messenger',
-    'bootcamp.questions',
     'bootcamp.search',
 )
 
