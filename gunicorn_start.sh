@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAME="bootcamp"                              #Name of the application (*)
-DJANGODIR=/root/public_html/ares.com    # Django project directory (*)
+DJANGODIR=/root/public_html/finpulse.com    # Django project directory (*)
 NUM_WORKERS=4                                             # how many worker processes should Gunicorn spawn (*)
 DJANGO_SETTINGS_MODULE=bootcamp.settings             # which settings file should Django use (*)
 DJANGO_WSGI_MODULE=bootcamp.wsgi                     # WSGI module name (*)
