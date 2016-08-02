@@ -1,11 +1,11 @@
 #!/bin/bash
 
 NAME="bootcamp"                              #Name of the application (*)
-DJANGODIR=/home/ubuntu/public_html/ares.com    # Django project directory (*)
+DJANGODIR=/root/public_html/ares.com    # Django project directory (*)
 NUM_WORKERS=4                                             # how many worker processes should Gunicorn spawn (*)
 DJANGO_SETTINGS_MODULE=bootcamp.settings             # which settings file should Django use (*)
 DJANGO_WSGI_MODULE=bootcamp.wsgi                     # WSGI module name (*)
-LOGFILE=/home/ubuntu/public_html/logs/gunicorn.log
+LOGFILE=/root/public_html/logs/gunicorn.log
 echo "Starting $NAME as `whoami`"
 
 # Activate the virtual environment
