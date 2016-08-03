@@ -7,3 +7,5 @@ python-decouple==3.0
 Pillow==3.3.0
 bleach==1.4.3
 psycopg2==2.6.2
+djangorestframework==3.4.1
+django-rest-knox==2.2.0

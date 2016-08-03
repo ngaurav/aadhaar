@@ -13,6 +13,7 @@ from bootcamp.search import views as search_views
 
 urlpatterns = [
     url(r'^$', core_views.home, name='home'),
+    url(r'^api/auth/', include('knox.urls')),
     url(r'^login', auth_views.login, {'template_name': 'core/cover.html'},
         name='login'),
     url(r'^logout', auth_views.logout, {'next_page': '/'}, name='logout'),

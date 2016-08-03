@@ -9,7 +9,7 @@ PROJECT_DIR = Path(__file__).parent
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 SECRET_KEY = config('SECRET_KEY')
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
@@ -37,6 +37,9 @@ INSTALLED_APPS = (
     'bootcamp.feeds',
     'bootcamp.messenger',
     'bootcamp.search',
+
+    'rest_framework',
+    'knox',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -98,3 +101,11 @@ ALLOWED_SIGNUP_DOMAINS = ['*']
 
 FILE_UPLOAD_TEMP_DIR = '/tmp/'
 FILE_UPLOAD_PERMISSIONS = 0o644
+
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 10,
+}
+
+REST_KNOX = {
+  'TOKEN_TTL': None,
+}
