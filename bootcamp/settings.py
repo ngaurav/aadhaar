@@ -37,9 +37,6 @@ INSTALLED_APPS = (
     'bootcamp.feeds',
     'bootcamp.messenger',
     'bootcamp.search',
-
-    'rest_framework',
-    'knox',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -102,10 +99,3 @@ ALLOWED_SIGNUP_DOMAINS = ['*']
 FILE_UPLOAD_TEMP_DIR = '/tmp/'
 FILE_UPLOAD_PERMISSIONS = 0o644
 
-REST_FRAMEWORK = {
-    'PAGE_SIZE': 10,
-}
-
-REST_KNOX = {
-  'TOKEN_TTL': None,
-}
