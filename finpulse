@@ -1,8 +1,8 @@
-server {
-  listen 80;
-  server_name 10.129.28.9;
-  return 301 $scheme://10.129.28.9$request_uri;
-}
+#server {
+#  listen 80;
+#  server_name 10.129.28.9;
+#  return 301 $scheme://10.129.28.9$request_uri;
+#}
 
 server {
   listen 80;
