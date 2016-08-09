@@ -1,0 +1,12 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=nishant
+Group=nishant
+WorkingDirectory=/home/nishant/
+ExecStart=/bin/bash /home/nishant/public_html/provider/gunicorn_start.sh
+
+[Install]
+WantedBy=multi-user.target
