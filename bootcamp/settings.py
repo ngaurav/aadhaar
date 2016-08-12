@@ -29,6 +29,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'django.contrib.admin',
 
     'bootcamp.activities',
     'bootcamp.authentication',
@@ -36,6 +37,8 @@ INSTALLED_APPS = (
     'bootcamp.feeds',
     'bootcamp.messenger',
     'bootcamp.search',
+
+    'allaccess',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -46,6 +49,13 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+
+AUTHENTICATION_BACKENDS = (
+    # Default backend
+    'django.contrib.auth.backends.ModelBackend',
+    # Additional backend
+    'allaccess.backends.AuthorizedServiceBackend',
 )
 
 ROOT_URLCONF = 'bootcamp.urls'
