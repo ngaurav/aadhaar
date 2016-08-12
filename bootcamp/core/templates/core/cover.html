@@ -20,7 +20,7 @@
     {% endif %}
     <div class="login">
       <h2>{% trans 'Log in' %}</h2>
-      <form method="post" action="{% url 'django.contrib.auth.views.login' %}" role="form">
+      <form method="post" action="{% url 'login' %}" role="form">
         {% csrf_token %}
         <div class="form-group{% if form.username.errors %} has-error{% endif %}">
           <label for="username">{% trans 'Username' %}</label>
