@@ -4,6 +4,7 @@ from django.conf.urls import include, url
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
+from django.contrib import admin
 
 from bootcamp.core import views as core_views
 from bootcamp.authentication import views as bootcamp_auth_views
@@ -37,6 +38,7 @@ urlpatterns = [
     url(r'^(?P<username>[^/]+)/$', core_views.profile, name='profile'),
     url(r'^i18n/', include('django.conf.urls.i18n', namespace='i18n')),
 
+    url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('allaccess.urls')),
 ]
 
