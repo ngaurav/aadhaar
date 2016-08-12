@@ -37,7 +37,6 @@ INSTALLED_APPS = (
     'bootcamp.feeds',
     'bootcamp.messenger',
     'bootcamp.search',
-
     'allaccess',
     'oauth2_provider',
     'corsheaders',
