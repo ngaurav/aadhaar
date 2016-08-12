@@ -18,9 +18,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('allaccess.urls')),
 
-    url(r'^login', auth_views.login, {'template_name': 'core/cover.html'},
+    url(r'^login/$', auth_views.login, {'template_name': 'core/cover.html'},
         name='login'),
-    url(r'^logout', auth_views.logout, {'next_page': '/'}, name='logout'),
+    url(r'^logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
     url(r'^signup/$', bootcamp_auth_views.signup, name='signup'),
     url(r'^settings/$', core_views.settings, name='settings'),
     url(r'^settings/picture/$', core_views.picture, name='picture'),
