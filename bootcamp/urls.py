@@ -17,7 +17,6 @@ urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('allaccess.urls')),
-    url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 
     url(r'^login', auth_views.login, {'template_name': 'core/cover.html'},
         name='login'),
