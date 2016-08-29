@@ -143,9 +143,9 @@ class OAuth2Client(BaseOAuthClient):
 
     def check_application_state(self, request, callback):
         "Check optional state parameter."
+        check = False
         stored = request.session.get(self.session_key, None)
         returned = request.GET.get('state', None)
-        check = False
         if stored is not None:
             if returned is not None:
                 check = constant_time_compare(stored, returned)
